@@ -3,7 +3,7 @@ require 'sinatra'
 # layout
 require 'haml'
 # gem install sys-uptime
-require 'sys/uptime'
+#require 'sys/uptime'
 # gem install sys-cpu
 require 'sys/cpu'
 
@@ -42,6 +42,7 @@ helpers do
   end
   
   def uptime
-    Sys::Uptime.days
+    #Sys::Uptime.days
+    '#'
   end
 end
