@@ -21,7 +21,10 @@ body {
 }
 
 h1 {
-  color: #c4df7e;
+  margin: 0 0 -20px 0;
+  padding: 10px 0 0 10px;
+  background: #c4df7e;
+  color: #fff;
 	font-size: 72px;
 }
 
@@ -52,9 +55,8 @@ acronym {
 	left: 50%;
 	height: 492px;
 	width: 633px;
-	margin: -280px -316px;
+	margin: -250px -316px;
 	padding-bottom: 15px;
-	background: url('../img/boxshadow.png') bottom no-repeat;
 }
 
 #box {
@@ -63,6 +65,7 @@ acronym {
 	padding: 25px 30px 25px 30px;
 	background: #fff;
 	font-size: 16px;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 #box table {
