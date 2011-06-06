@@ -5,7 +5,7 @@ require 'haml'
 # gem install sys-uptime
 #require 'sys/uptime'
 # gem install sys-cpu
-require 'sys/cpu'
+#require 'sys/cpu'
 
 
 get '/' do
@@ -38,7 +38,8 @@ helpers do
   end
   
   def load_average
-    (Sys::CPU.load_avg[1] * 100).round
+    #(Sys::CPU.load_avg[1] * 100).round
+    '#'
   end
   
   def uptime
