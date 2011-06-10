@@ -41,7 +41,6 @@ helpers do
   end
   
   def uptime
-    #Sys::Uptime.days
-    '#'
+    Sys::Uptime.days
   end
 end
