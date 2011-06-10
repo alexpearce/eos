@@ -1,9 +1,8 @@
-require 'rubygems'
 require 'sinatra'
 # layout
 require 'haml'
 # gem install sys-uptime
-#require 'sys/uptime'
+require 'sys/uptime'
 # gem install sys-cpu
 require 'sys/cpu'
 
