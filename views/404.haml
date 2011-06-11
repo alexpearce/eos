@@ -4,32 +4,32 @@
     %meta{:charset => 'utf-8'}
     %meta{:'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}
     
-    %title 404 Page Not Found
+    %title Server Status Page - Selene
     
-    %meta{:name => 'description', :content => 'Portfolio of PHP and Ruby on Rails web developer Alex Pearce.'}
+    %meta{:name => 'description', :content => 'Status page for Selene: a friendly server.'}
     %meta{:author => 'Alex Pearce'}
     
-    %link{:rel => 'stylesheet', :href => 'css/alexpearce.me.css'}
+    %link{:rel => 'stylesheet', :href => 'css/selene.css'}
     
     %script{:src => 'js/libs/modernizr.js'}
     
   %body
   
-    #container
+    #center.err
+  
+      %h1 404
+    
+      #box
+        %h2 File Not Found
       
-      #server-code
-        %h1 File Not Found
-        %p The rabbit that lives in the server must have eaten what you're looking for.
-        %p If you think there should be something here, let me know.
-      
-      %footer
-        &copy; Alex Pearce
+        %p We couldn't find what you were looking for. Please get in touch if you think something should be here.
+        
+        %form{:action => 'mailto:webmaster@alexpearce.me', :method => :get}
+          .simple-button.green
+            %input{:type => 'submit', :value => 'Contact'}
 
     %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'}
     %script
       !window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery.js"%3E%3C/script%3E"'))
 
-    %script{:src => 'js/cufon-archer.js'}
-
-    %script{:src => 'js/lightbox.js'}
-    %script{:src => 'js/alexpearce.me.js'}
+    %script{:src => 'js/selene.js'}
