@@ -13,18 +13,9 @@ end
 
 helpers do
   def used_memory
-    return '#' if ENV['RACK_ENV'] == 'development' # OS X doesn't have a /proc/meminfo
+    return '#' if ENV['RACK_ENV'] == 'development' # OS X doesn't have a free
     
-    f = File.new('/proc/meminfo')
-
-    info = {}
-
-    while line = f.gets
-      key, val = line.gsub(/ /,'').split(':')
-      info[key.downcase.to_sym] = val.gsub(/kB/,'').strip.to_f
-    end
-
-    puts ((info[:memtotal] - info[:memfree]) / 1000)
+    `free`.split(" ")[8]
   end
   
   def load_average
