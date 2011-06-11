@@ -15,7 +15,7 @@ helpers do
   def used_memory
     return '#' if ENV['RACK_ENV'] == 'development' # OS X doesn't have a free
     
-    `free`.split(" ")[8]
+    `free`.split(" ")[8].to_i / 1000
   end
   
   def load_average
