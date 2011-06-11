@@ -29,7 +29,6 @@ helpers do
   
   def load_average
     require 'sys/cpu'
-    include Sys
     (Sys::CPU.load_avg[1] * 100).round
   end
   
