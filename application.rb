@@ -1,10 +1,3 @@
-require 'sinatra'
-# layout
-require 'haml'
-# gem install sys-cpu
-require 'sys/cpu'
-
-
 get '/' do
   haml :index
 end
