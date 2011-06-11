@@ -1,3 +1,5 @@
+require 'sys/cpu'
+
 get '/' do
   haml :index
 end
@@ -28,7 +30,6 @@ helpers do
   end
   
   def load_average
-    require 'sys/cpu'
     (Sys::CPU.load_avg[1] * 100).round
   end
   
