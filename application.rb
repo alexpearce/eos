@@ -30,7 +30,7 @@ helpers do
   end
   
   def load_average
-    (Sys::CPU.load_avg[1] * 100).round
+    (::Sys::CPU.load_avg[1] * 100).round
   end
   
   def uptime
