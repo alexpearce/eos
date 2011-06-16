@@ -17,7 +17,7 @@ class Selene < Sinatra::Base
     def used_memory
       return '#' if ENV['RACK_ENV'] == 'development' # OS X doesn't have a free
     
-      `free -m`.split(" ")[-5]
+      `free -m`.split(" ")[-6]
     end
   
     def load_average
