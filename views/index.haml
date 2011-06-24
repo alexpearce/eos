@@ -7,7 +7,7 @@
     %title Server Status Page - Selene
     
     %meta{:name => 'description', :content => 'Status page for Selene: a friendly server.'}
-    %meta{:author => 'Alex Pearce'}
+    %meta{:name => :author, :content => 'Alex Pearce'}
     
     %link{:rel => 'stylesheet', :href => 'css/selene.css'}
     
@@ -29,7 +29,7 @@
           %tr
             %td SQL Server
             %td
-              %img{:src => 'img/tick.png'}
+              %img{:src => 'img/tick.png', :alt => 'Online'}
           %tr
             %td Uptime
             %td
@@ -44,9 +44,9 @@
             %td Load Average
             %td
               = load_average
-              %soan.units %
+              %span.units %
       
-        %p This Selene's status page, where you can monitor a handful of vital signs for the <acronym title="Virtual Private Server">VPS</acronym> that hosts AlexPearce.me, amongst other things.
+        %p This Selene's status page, where you can monitor a handful of vital signs for the <abbr title="Virtual Private Server">VPS</abbr> that hosts AlexPearce.me, amongst other things.
         
         %form{:action => 'mailto:webmaster@alexpearce.me', :method => :get}
           .simple-button.green
