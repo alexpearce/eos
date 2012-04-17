@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  # If we're not in the selene subdomain, 404!
+  RewriteCond %{HTTP_HOST} !^selene\..+$ [NC]
+  RewriteRule ^ http://selene.alexpearce.me/404 [R=301,L]
+</IfModule>
