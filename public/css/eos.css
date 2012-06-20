@@ -27,6 +27,10 @@ h2 {
 	font-size: 24px;
 }
 
+.err h2 {
+  margin: 0 0 45px 0;
+}
+
 p {
   color: #333;
 	font-size: 12px;
@@ -43,7 +47,7 @@ acronym {
 	cursor: help;
 }
 
-#center {
+.center {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -59,11 +63,11 @@ acronym {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-#center.err #box {
+.center.err .box {
   height: 150px;
 }
 
-#box {
+.box {
   height: 360px;
 	width: 573px;
 	padding: 25px 30px 0 30px;
@@ -71,26 +75,26 @@ acronym {
 	font-size: 16px;
 }
 
-#box table {
+.box table {
 	margin: 20px 20px 40px 20px;
 }
 
-#box table td {
+.box table td {
 	width: 200px;
 	padding: 10px 0;
 }
 
-#box table th {
+.box table th {
 	color: #aaa;
 	font-weight: bold;
 	text-align: left;
 }
 
-#box table span.units {
+.box table span.units {
   color: #ccc;
 }
 
-#box p {
+.box p {
 	width: 300px;
 	padding: 15px;
 	float: left;
@@ -98,7 +102,7 @@ acronym {
 	margin-top: -15px;
 }
 
-#box form input {
+.box form input {
   
 }
 

@@ -13,15 +13,14 @@
     
   %body
   
-    #center.err
+    .center.err
   
       %h1 404
     
-      #box
+      .box
         %h2 File Not Found
       
         %p We couldn't find what you were looking for. Please get in touch if you think something should be here.
         
-        %form{:action => 'mailto:webmaster@alexpearce.me', :method => :get}
-          .simple-button.green
-            %input{:type => 'submit', :value => 'Contact'}
+        .contact
+          %a.simple-button.pink{:href => "mailto:webmaster@alexpearce.me"} Contact
