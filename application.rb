@@ -19,7 +19,7 @@ class Eos < Sinatra::Base
     def postgres_up
       return false if ENV["RACK_ENV"] == "development" # No PostgreSQL on my OS X
       
-      `service postgresql status` == "Running clusters: 9.1/main"
+      `service postgresql status`.strip == "Running clusters: 9.1/main"
     end
     
     def used_memory
