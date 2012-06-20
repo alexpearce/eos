@@ -1,4 +1,4 @@
-class Selene < Sinatra::Base
+class Eos < Sinatra::Base
   
   set :haml, :format => :html5, :attr_wrapper => '"'
   #set :haml, 
