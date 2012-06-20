@@ -27,7 +27,10 @@
           %tr
             %td SQL Server
             %td
-              %img{:src => 'img/tick.png', :alt => 'Online'}
+              - if postgres_up == true
+                %img{:src => 'img/tick.png', :alt => 'Online'}
+              - else
+                %img{:src => 'img/cross.png', :alt => 'Online'}
           %tr
             %td Uptime
             %td
