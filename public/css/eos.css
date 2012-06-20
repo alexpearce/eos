@@ -9,10 +9,7 @@ html {
 }
 
 body {
-  backgroud: url('../img/honeycomb.png');
-	background: url('../img/honeycomb.png'), -webkit-linear-gradient(top, #fff 0%, #eee 100%);
-	background: url('http://subtlepatterns.com/patterns/dirty_old_shirt.png'), -webkit-linear-gradient(top, #fff 0%, #eee 100%);
-	background: url('../img/honeycomb.png'), -moz-linear-gradient(top, #fff 0%, #eee 100%);
+  background: url('../img/dirty-old-shirt.png');
 	font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
 	color: #444;
 }
