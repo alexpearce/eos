@@ -5,12 +5,15 @@ set :default_environment, {
   "PATH" => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 }
 
-set :applications, "eos"
+set :application, "eos"
 set :user, "deploy"
 set :use_sudo, false
 
 # Required for sudo password prompt
 default_run_options[:pty] = true
+
+# Forward public keys
+ssh_options[:forward_agent] = true
 
 # Use git, set the repo
 set :scm, :git
