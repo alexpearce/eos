@@ -1,9 +1,8 @@
 class Eos < Sinatra::Base
   
   set :haml, :format => :html5, :attr_wrapper => '"'
-  #set :haml, 
 
-  get '/' do
+  get "/" do
     haml :index
   end
 
@@ -18,17 +17,17 @@ class Eos < Sinatra::Base
 
   helpers do
     def used_memory
-      return '#' if ENV['RACK_ENV'] == 'development' # OS X doesn't have a free
+      return "#" if ENV["RACK_ENV"] == "development" # OS X doesn't have a free
     
       `free -m`.split(" ")[-6]
     end
   
     def load_average
-      (`uptime`.strip.split(' ').last.to_f * 100).to_i
+      (`uptime`.strip.split(" ").last.to_f * 100).to_i
     end
   
     def uptime
-      `uptime`.strip.split(' ')[2]
+      `uptime`.strip.split(" ")[2]
     end
   end
   

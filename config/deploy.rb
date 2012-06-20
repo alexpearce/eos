@@ -1,4 +1,4 @@
-require 'bundler/capistrano'
+require "bundler/capistrano"
 
 # Load rbenv
 set :default_environment, {

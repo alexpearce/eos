@@ -1,9 +1,9 @@
 source :rubygems
 
-gem 'sinatra'
+gem "sinatra"
 
 # layout
-gem 'haml'
+gem "haml"
 
 # deployment
-gem 'capistrano'
+gem "capistrano"
