@@ -7,11 +7,24 @@ server {
 
   passenger_enabled on;
   
-  # Gzip and cache all the things
-  location ^~ / {
-    gzip_static on;
-    # 30 days in seconds
-    expires 2592000;
+  # Gzip and cache all assets
+  location ~ ^/(css|img|js)/ {
+      gzip_static on;
+      # One month in hours
+      expires     720h;
+      add_header  Cache-Control public;
+      add_header  Last-Modified "";
+      add_header  ETag "";
+      break;
+  }
+
+  # Maximally cache the favicon
+  location = /favicon.(ico|png) {
+    expires    max;
     add_header Cache-Control public;
   }
+  
+  # Don't want logs for it
+  access_log /dev/null;
+  error_log /dev/null;
 }
