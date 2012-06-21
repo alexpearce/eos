@@ -1,6 +1,6 @@
 server {
   # Name the server is accessed via
-  server_name 31.193.143.153, eos.alexpearce.me;
+  server_name 31.193.143.153 eos.alexpearce.me;
 
   # Where the site is
   root /home/deploy/apps/eos/current/public;
