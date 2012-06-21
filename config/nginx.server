@@ -1,9 +1,17 @@
 server {
   # Name the server is accessed via
-  server_name 31.193.143.153;
+  server_name 31.193.143.153, eos.alexpearce.me;
 
   # Where the site is
   root /home/deploy/apps/eos/current/public;
 
   passenger_enabled on;
+  
+  # Gzip and cache all the things
+  location ^~ / {
+    gzip_static on;
+    # 30 days in seconds
+    expires 2592000;
+    add_header Cache-Control public;
+  }
 }
